@@ -6,10 +6,11 @@ import Header from "./pages/Header/page";
 import SiderBar from "./pages/Siderbar/page";
 import Content from "./pages/Content/page";
 
+
 export default function Home() {
   const data =process.env.API_KEY
   const fetchData = async()=>{
-    const Fetching = await fetch(`https://api.pexels.com/videos/popular?page=2&per_page=80`,{
+    const Fetching = await fetch(`https://api.pexels.com/v1/curated?page=1&per_page=80`,{
       headers: {
         Authorization: 'q0DDDK5x4GZjyxlDSyqL4IXwD4WHGaBdij4ysr5SRMBSCY4jtdBixcAp'
       }
